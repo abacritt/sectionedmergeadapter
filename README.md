@@ -14,15 +14,12 @@ ArrayAdapter<String> adapter2 =
 ArrayAdapter<String> adapter3 =
         new ArrayAdapter<>(this, R.layout.item_list, android.R.id.text1, arrayList3);
 
-TextView tv1 = (TextView) getLayoutInflater().inflate(R.layout.item_header, null, false)
-        .findViewById(R.id.headerText);
-tv1.setText("Header 1");
-TextView tv2 = (TextView) getLayoutInflater().inflate(R.layout.item_header, null, false)
-        .findViewById(R.id.headerText);
-tv2.setText("Header 2");
-TextView tv3 = (TextView) getLayoutInflater().inflate(R.layout.item_header, null, false)
-        .findViewById(R.id.headerText);
-tv3.setText("Header 3");
+TextView tv1 = new TextView(this);
+tv1.setText(R.string.header_1);
+TextView tv2 = new TextView(this);
+tv2.setText(R.string.header_2);
+TextView tv3 = new TextView(this);
+tv3.setText(R.string.header_3);
 
 SectionedMergeAdapter adapter = new SectionedMergeAdapter();
 
