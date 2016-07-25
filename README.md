@@ -2,23 +2,30 @@
 
 This is a library based on `MergeAdapter` by CommonsWare. It allows you to work with sections and subheaders in your `ListView`s. With this library, you get the advantage of stitching together the rows and the header of the subsection in the subsection itself. For example, if there are no rows in a subsection of the `ListView`, the header of the subsection is also not shown.
 
+### Screenshot
+
+![Screenshot](app/Screenshot_20160724-231927.png?raw=true)
+
 ### Example code
 
 ```java
 ListView listView = (ListView) findViewById(android.R.id.list);
 
-ArrayAdapter<Integer> adapter1 =
+ArrayAdapter<String> adapter1 =
         new ArrayAdapter<>(this, R.layout.item_list, android.R.id.text1, arrayList1);
-ArrayAdapter<Integer> adapter2 =
+ArrayAdapter<String> adapter2 =
         new ArrayAdapter<>(this, R.layout.item_list, android.R.id.text1, arrayList2);
-ArrayAdapter<Integer> adapter3 =
+ArrayAdapter<String> adapter3 =
         new ArrayAdapter<>(this, R.layout.item_list, android.R.id.text1, arrayList3);
 
-TextView tv1 = new TextView(this);
+TextView tv1 = (TextView) getLayoutInflater().inflate(R.layout.item_header, null, false)
+        .findViewById(R.id.headerText);
 tv1.setText("Header 1");
-TextView tv2 = new TextView(this);
+TextView tv2 = (TextView) getLayoutInflater().inflate(R.layout.item_header, null, false)
+        .findViewById(R.id.headerText);
 tv2.setText("Header 2");
-TextView tv3 = new TextView(this);
+TextView tv3 = (TextView) getLayoutInflater().inflate(R.layout.item_header, null, false)
+        .findViewById(R.id.headerText);
 tv3.setText("Header 3");
 
 SectionedMergeAdapter adapter = new SectionedMergeAdapter();
