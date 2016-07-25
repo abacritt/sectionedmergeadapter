@@ -4,7 +4,7 @@ This is a library based on `MergeAdapter` by CommonsWare. It allows you to work 
 
 ### Screenshot
 
-![Screenshot](app/Screenshot_20160724-231927.png?raw=true)
+<div style="text-align:center"><img src="app/Screenshot_20160724-231927.png" style="width:450px"/></div>
 
 ### Example code
 
