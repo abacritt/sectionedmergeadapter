@@ -2,6 +2,24 @@
 
 This is a library based on `MergeAdapter` by CommonsWare. It allows you to work with sections and subheaders in your `ListView`s. With this library, you get the advantage of stitching together the rows and the header of the subsection in the subsection itself. For example, if there are no rows in a subsection of the `ListView`, the header of the subsection is also not shown.
 
+### Installation
+1. Add the JitPack repository to your build file.
+```groovy
+allprojects {
+    repositories {
+        ...
+        maven { url "https://jitpack.io" }
+    }
+}
+```
+2. Add the dependency
+```groovy
+dependencies {
+    compile 'com.github.abacritt:sectionedmergeadapter:0.2'
+}
+```
+Or, simply clone the repository and import the module in your project.
+
 ### Example code
 
 ```java
@@ -35,9 +53,7 @@ Since `SectionedMergeAdapter` is extending from the `MergeAdapter`, you can use 
 
 For a detailed list of things supported with `MergeAdapter` check out [CWAC MergeAdapter](https://github.com/commonsguy/cwac-merge).
 
-### Installation
-Clone the repository and import the module in your project.
-
 ### Screenshot
-
 ![Screenshot](app/Screenshot_20160724-231927.png)
+
+[![](https://jitpack.io/v/abacritt/sectionedmergeadapter.svg)](https://jitpack.io/#abacritt/sectionedmergeadapter)
