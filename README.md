@@ -9,6 +9,7 @@ allprojects {
     repositories {
         ...
         maven { url "https://jitpack.io" }
+        maven { url "https://s3.amazonaws.com/repo.commonsware.com" }
     }
 }
 ```
